@@ -8,5 +8,22 @@
 </head>
 <body>
     <h1>hello</h1>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+    const settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly?lat=35.5&lon=-78.5",
+        "method": "GET",
+        "headers": {
+            "X-RapidAPI-Key": "bbd319787bmshdef3ab9e896b164p1cc007jsn5247d1c9f259",
+            "X-RapidAPI-Host": "weatherbit-v1-mashape.p.rapidapi.com"
+        }
+    };
+
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+    });
+</script>
 </body>
 </html>
